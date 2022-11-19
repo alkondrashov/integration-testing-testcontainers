@@ -27,7 +27,7 @@ namespace Cars.Controllers
                 _logger.LogInformation("Checked=" + model.Available + " Text" + model.Name);
                 var result = await connection.QueryAsync<string>("INSERT INTO cars (name, available) values (@Name, @Available); SELECT LAST_INSERT_ID();", model);
                 var id = result.Single();
-                return await Get("100");
+                return await Get(id);
             }
         }
 
