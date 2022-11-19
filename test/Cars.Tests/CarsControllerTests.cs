@@ -13,11 +13,8 @@ namespace Cars.Tests
 
         private string _endpoint = "/api/cars";
 
-        private ITestOutputHelper _outputHelper { get; }
-
-        public CarsControllerTests(IntegrationTestFactory factory, ITestOutputHelper outputHelper)
+        public CarsControllerTests(IntegrationTestFactory factory)
         {
-            _outputHelper = outputHelper;
             _factory = factory;
         }
         

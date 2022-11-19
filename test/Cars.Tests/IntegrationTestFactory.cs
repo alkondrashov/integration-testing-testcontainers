@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Xunit;
 
 namespace Cars.Tests;
@@ -32,6 +33,7 @@ public class IntegrationTestFactory : WebApplicationFactory<Program>, IAsyncLife
     {
         builder.ConfigureTestServices(services =>
         {
+            services.RemoveAll<IDbConnectionFactory>();
             services.AddSingleton<IDbConnectionFactory>(_ => new MySqlConnectionFactory(_container.ConnectionString));
         });
     }
