@@ -1,5 +1,5 @@
 using System.Threading.Tasks;
-using Cars.Database;
+using Cars.Infrastructure;
 using DotNet.Testcontainers.Builders;
 using DotNet.Testcontainers.Configurations;
 using DotNet.Testcontainers.Containers;

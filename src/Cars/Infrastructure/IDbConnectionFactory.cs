@@ -1,6 +1,6 @@
 using System.Data;
 
-namespace Cars.Database;
+namespace Cars.Infrastructure;
 
 public interface IDbConnectionFactory
 {

@@ -1,4 +1,4 @@
-using Cars.Database;
+using Cars.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -3,7 +3,6 @@ using System.Text;
 using Cars.Controllers;
 using Newtonsoft.Json;
 using Xunit;
-using Xunit.Abstractions;
 
 namespace Cars.Tests
 {
